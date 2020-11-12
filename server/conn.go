@@ -173,8 +173,8 @@ XCHANGEPASSWORD LOGIN
 */
 
 func (c *conn) Capabilities() []string {
-	caps := []string{"IMAP4rev1", "LITERAL+", "SASL-IR", "CHILDREN", //? "AUTH=DIGEST-MD5"
-		"NAMESPACE", "QUOTA", "QRESYNC", "UNSELECT", "WITHIN", "ENABLE", "SEARCHRES", "UIDPLUS",
+	caps := []string{"IMAP4rev1", "LITERAL+", "SASL-IR", "CHILDREN",
+		"PLAIN", "AUTH=DIGEST-MD5", "CHILDREN", "NAMESPACE", "QUOTA", "QRESYNC", "UNSELECT", "WITHIN", "ENABLE", "SEARCHRES", "UIDPLUS",
 		"CONDSTORE", "ANNOTATION", "ESEARCH", "I18NLEVEL=1", "XCHANGEPASSWORD", "LOGIN",
 	}
 
@@ -243,10 +243,10 @@ func (c *conn) greet() error {
 	}
 
 	greeting := &imap.StatusResp{
-		Type:      imap.StatusRespOk,
-		Code:      imap.CodeCapability,
-		Arguments: args,
-		Info:      "IMAP4rev1 Service Ready",
+		// Type:      imap.StatusRespOk,
+		Code: imap.CodeCapability,
+		// Arguments: args,
+		// Info:      "IMAP4rev1 Service Ready",
 	}
 
 	return c.WriteResp(greeting)
