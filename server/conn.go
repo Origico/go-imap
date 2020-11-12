@@ -162,8 +162,21 @@ func (c *conn) Close() error {
 	return c.Conn.Close()
 }
 
+/*
+наша
+* OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR AUTH=PLAIN] IMAP4rev1 Service Ready
+
+старая
+* CAPABILITY PLAIN NAMESPACE AUTH=DIGEST-MD5 QUOTA IMAP4rev1 QRESYNC UNSELECT WITHIN SASL-IR
+ENABLE SEARCHRES UIDPLUS CHILDREN CONDSTORE AUTH=PLAIN LITERAL+ ANNOTATION ESEARCH I18NLEVEL=1
+XCHANGEPASSWORD LOGIN
+*/
+
 func (c *conn) Capabilities() []string {
-	caps := []string{"IMAP4rev1", "LITERAL+", "SASL-IR", "CHILDREN"}
+	caps := []string{"IMAP4rev1", "LITERAL+", "SASL-IR", "CHILDREN", //? "AUTH=DIGEST-MD5"
+		"NAMESPACE", "QUOTA", "QRESYNC", "UNSELECT", "WITHIN", "ENABLE", "SEARCHRES", "UIDPLUS",
+		"CONDSTORE", "ANNOTATION", "ESEARCH", "I18NLEVEL=1", "XCHANGEPASSWORD", "LOGIN",
+	}
 
 	if c.ctx.State == imap.NotAuthenticatedState {
 		if !c.IsTLS() && c.s.TLSConfig != nil {
