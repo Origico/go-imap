@@ -176,7 +176,7 @@ XCHANGEPASSWORD LOGIN
 
 func (c *conn) Capabilities() []string {
 	caps := []string{
-		"PLAIN", "NAMESPACE", " AUTH=DIGEST-MD5", "QUOTA",
+		"PLAIN", "NAMESPACE", "AUTH=DIGEST-MD5", "QUOTA",
 		"IMAP4rev1", "QRESYNC", "UNSELECT", "WITHIN", "SASL-IR",
 		"ENABLE", "SEARCHRES", "UIDPLUS", "CHILDREN", "CONDSTORE",
 		"AUTH=PLAIN", "LITERAL+", "ANNOTATION", "ESEARCH", "I18NLEVEL=1",
@@ -188,13 +188,13 @@ func (c *conn) Capabilities() []string {
 			caps = append(caps, "STARTTLS")
 		}
 
-		if !c.canAuth() {
-			caps = append(caps, "LOGINDISABLED")
-		} else {
-			for name := range c.s.auths {
-				caps = append(caps, "AUTH="+name)
-			}
-		}
+		// if !c.canAuth() {
+		// 	caps = append(caps, "LOGINDISABLED")
+		// } else {
+		// 	for name := range c.s.auths {
+		// 		caps = append(caps, "AUTH="+name)
+		// 	}
+		// }
 	}
 
 	for _, ext := range c.s.extensions {
