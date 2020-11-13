@@ -247,11 +247,13 @@ func (c *conn) greet() error {
 		args[i] = imap.RawString(cap)
 	}
 
+	// * OK OWL IMAP4rev1 Server  Server vm_vvm_sip1 is ready.
+
 	greeting := &imap.StatusResp{
 		Type: imap.StatusRespOk,
 		// Code: imap.CodeCapability,
 		// Arguments: args,
-		Info: "VVM IMAP4rev1 Server  Server vm_vvm_sip1 is ready.\r\n250 STARTTLS\r\n",
+		Info: "OWL IMAP4rev1 Server  Server vm_vvm_sip1 is ready. \r\n250 STARTTLS",
 	}
 
 	return c.WriteResp(greeting)
