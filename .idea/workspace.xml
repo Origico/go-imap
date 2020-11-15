@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d0b1fe32-1c87-452a-8de5-16a2b5294e57" name="Default Changelist" comment="imap conn greeting message has been fixed again">
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-imap-quota/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-imap-quota/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-imap-quota/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-imap-quota/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-imap-quota/commands.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-imap-quota/quota.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-imap-quota/responses.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-imap-quota/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/.build.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/charset.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/encoding.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/entity.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/header.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/mail/address.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/mail/attachment.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/mail/header.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/mail/inline.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/mail/mail.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/mail/reader.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/mail/writer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/message.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/multipart.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/textproto/header.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/textproto/multipart.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/writer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/anonymous.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/external.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/login.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/oauthbearer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/plain.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/sasl.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/xoauth2.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-textwrapper/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-textwrapper/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-textwrapper/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-textwrapper/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-textwrapper/wrapper.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/martinlindhe/base36/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/martinlindhe/base36/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/martinlindhe/base36/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/martinlindhe/base36/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/martinlindhe/base36/base36.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/golang.org/x/text/AUTHORS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/golang.org/x/text/CONTRIBUTORS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/golang.org/x/text/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/golang.org/x/text/PATENTS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/golang.org/x/text/encoding/encoding.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/golang.org/x/text/encoding/internal/identifier/identifier.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/golang.org/x/text/encoding/internal/identifier/mib.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/golang.org/x/text/transform/transform.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/modules.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1kCcIyDFB73vxEjKXXrlgCJ01lv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="imap conn greeting message has been fixed again" />
+    <option name="LAST_COMMIT_MESSAGE" value="imap conn greeting message has been fixed again" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="568" y="320" key="#Go_Modules" timestamp="1605207946390">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="568" y="320" key="#Go_Modules/0.0.1536.960@0.0.1536.960" timestamp="1605207946390" />
+    <state x="338" y="72" key="CommitChangelistDialog2" timestamp="1605213440963">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="338" y="72" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1605213440963" />
+    <state x="100" y="100" width="1336" height="760" key="DiffContextDialog" timestamp="1605212303813">
+      <screen x="0" y="23" width="1536" height="937" />
+    </state>
+    <state x="100" y="100" width="1336" height="760" key="DiffContextDialog/0.23.1536.937@0.23.1536.937" timestamp="1605212303813" />
+    <state x="154" y="85" key="MergeDialog" timestamp="1605209900666">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="154" y="85" key="MergeDialog/0.0.1536.960@0.0.1536.960" timestamp="1605209900666" />
+    <state x="269" y="119" key="SettingsEditor" timestamp="1605207957284">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1605207957284" />
+    <state x="368" y="220" key="Vcs.Push.Dialog.v2" timestamp="1605212022426">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="368" y="220" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1605212022426" />
+    <state x="566" y="401" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605209894455">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="566" y="401" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.960@0.0.1536.960" timestamp="1605209894455" />
+    <state x="469" y="235" width="598" height="490" key="find.popup" timestamp="1605212651130">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="469" y="235" width="598" height="490" key="find.popup/0.0.1536.960@0.0.1536.960" timestamp="1605212651130" />
+  </component>
+</project>
