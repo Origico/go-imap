@@ -75,4 +75,8 @@ type Mailbox interface {
 	// If the Backend implements Updater, it must notify the client immediately
 	// via an expunge update.
 	Expunge() error
+
+	// Added by Akrillis 20201115 22:43 Msk
+	// ListQuotas returns the currently active quotas for this mailbox.
+	ListQuotas() ([]string, error)
 }
