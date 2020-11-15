@@ -10,9 +10,9 @@ const Xoauth2 = "XOAUTH2"
 
 // An XOAUTH2 error.
 type Xoauth2Error struct {
-	Status  string `json:"status"`
+	Status string `json:"status"`
 	Schemes string `json:"schemes"`
-	Scope   string `json:"scope"`
+	Scope string `json:"scope"`
 }
 
 // Implements error.
@@ -22,7 +22,7 @@ func (err *Xoauth2Error) Error() string {
 
 type xoauth2Client struct {
 	Username string
-	Token    string
+	Token string
 }
 
 func (a *xoauth2Client) Start() (mech string, ir []byte, err error) {

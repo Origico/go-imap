@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0b1fe32-1c87-452a-8de5-16a2b5294e57" name="Default Changelist" comment="imap conn greeting message has been fixed again">
+    <list default="true" id="d0b1fe32-1c87-452a-8de5-16a2b5294e57" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/mailbox.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mailbox.go" afterDir="false" />
     </list>
@@ -52,7 +52,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="imap conn greeting message has been fixed again" />
-    <option name="LAST_COMMIT_MESSAGE" value="imap conn greeting message has been fixed again" />
+    <MESSAGE value="ListQuotas() fun has been added to Mailbox interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="ListQuotas() fun has been added to Mailbox interface" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -62,10 +63,10 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="568" y="320" key="#Go_Modules/0.0.1536.960@0.0.1536.960" timestamp="1605207946390" />
-    <state x="338" y="72" key="CommitChangelistDialog2" timestamp="1605213440963">
+    <state x="338" y="72" key="CommitChangelistDialog2" timestamp="1605469444522">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="338" y="72" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1605213440963" />
+    <state x="338" y="72" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1605469444522" />
     <state x="100" y="100" width="1336" height="760" key="DiffContextDialog" timestamp="1605212303813">
       <screen x="0" y="23" width="1536" height="937" />
     </state>
@@ -78,10 +79,10 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1605207957284" />
-    <state x="368" y="220" key="Vcs.Push.Dialog.v2" timestamp="1605212022426">
+    <state x="368" y="220" key="Vcs.Push.Dialog.v2" timestamp="1605469446369">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="368" y="220" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1605212022426" />
+    <state x="368" y="220" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1605469446369" />
     <state x="566" y="401" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605209894455">
       <screen x="0" y="0" width="1536" height="960" />
     </state>

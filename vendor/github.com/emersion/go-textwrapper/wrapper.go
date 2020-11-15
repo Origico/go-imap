@@ -51,7 +51,7 @@ func New(w io.Writer, sep string, l int) io.Writer {
 	return &writer{
 		Sep: sep,
 		Len: l,
-		w:   w,
+		w: w,
 	}
 }
 
