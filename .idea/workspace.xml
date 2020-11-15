@@ -2,68 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0b1fe32-1c87-452a-8de5-16a2b5294e57" name="Default Changelist" comment="imap conn greeting message has been fixed again">
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-imap-quota/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-imap-quota/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-imap-quota/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-imap-quota/client.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-imap-quota/commands.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-imap-quota/quota.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-imap-quota/responses.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-imap-quota/server.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/.build.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/charset.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/encoding.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/entity.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/header.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/mail/address.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/mail/attachment.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/mail/header.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/mail/inline.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/mail/mail.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/mail/reader.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/mail/writer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/message.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/multipart.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/textproto/header.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/textproto/multipart.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-message/writer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/anonymous.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/external.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/login.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/oauthbearer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/plain.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/sasl.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-sasl/xoauth2.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-textwrapper/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-textwrapper/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-textwrapper/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-textwrapper/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/emersion/go-textwrapper/wrapper.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/martinlindhe/base36/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/martinlindhe/base36/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/martinlindhe/base36/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/martinlindhe/base36/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/martinlindhe/base36/base36.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/golang.org/x/text/AUTHORS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/golang.org/x/text/CONTRIBUTORS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/golang.org/x/text/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/golang.org/x/text/PATENTS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/golang.org/x/text/encoding/encoding.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/golang.org/x/text/encoding/internal/identifier/identifier.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/golang.org/x/text/encoding/internal/identifier/mib.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/golang.org/x/text/transform/transform.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/modules.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

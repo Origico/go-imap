@@ -12,7 +12,6 @@ import (
 	"time"
 
 	"github.com/emersion/go-imap"
-	"github.com/emersion/go-imap-quota"
 	"github.com/emersion/go-imap/backend"
 	"github.com/emersion/go-imap/responses"
 	"github.com/emersion/go-sasl"
@@ -187,9 +186,6 @@ func New(bkd backend.Backend) *Server {
 		"COPY":    func() Handler { return &Copy{} },
 		"UID":     func() Handler { return &Uid{} },
 	}
-
-	// enable QUOTA extension
-	s.Enable(quota.NewExtension())
 
 	return s
 }
