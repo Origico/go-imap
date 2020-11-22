@@ -40,6 +40,7 @@ const (
 	FetchRFC822Size    FetchItem = "RFC822.SIZE"
 	FetchRFC822Text    FetchItem = "RFC822.TEXT"
 	FetchUid           FetchItem = "UID"
+	FetchModSeq        FetchItem = "MODSEQ"
 )
 
 // Expand expands the item if it's a macro.
