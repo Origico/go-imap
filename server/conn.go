@@ -185,7 +185,7 @@ func (c *conn) Capabilities() []string {
 
 	// NAMESPACE and QUOTA have been removed
 	caps := []string{
-		"PLAIN", "AUTH=DIGEST-MD5",
+		"PLAIN", "NAMESPACE", "AUTH=DIGEST-MD5", "QUOTA",
 		"IMAP4rev1", "QRESYNC", "UNSELECT", "WITHIN", "SASL-IR",
 		"ENABLE", "SEARCHRES", "UIDPLUS", "CHILDREN", "CONDSTORE",
 		"AUTH=PLAIN", "LITERAL+", "ANNOTATION", "ESEARCH", "I18NLEVEL=1",
