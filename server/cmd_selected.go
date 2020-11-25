@@ -136,7 +136,7 @@ func (cmd *Search) handle(uid bool, conn Conn) error {
 		return err
 	}
 
-	res := &responses.Search{Ids: ids}
+	res := &responses.Search{Ids: ids, ReturnValue: cmd.Criteria.ReturnValue, Tag: cmd.Criteria.Tag}
 	return conn.WriteResp(res)
 }
 
