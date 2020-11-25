@@ -43,9 +43,16 @@ func (r *Search) WriteTo(w *imap.Writer) (err error) {
 				res += fmt.Sprintf("COUNT %d", r.Ids[0])
 			}
 		} else if r.ReturnValue == "ALL" {
-			seq := imap.SeqSet{}
-			seq.AddNum(r.Ids...)
-			res += fmt.Sprintf("ALL %s", seq.String())
+			//seq := imap.SeqSet{}
+			// seq.AddNum(r.Ids...)
+			res += "ALL "
+			for gg, id := range r.Ids {
+				if gg < len(r.Ids) {
+					res += fmt.Sprintf("%d,", id)
+				} else {
+					res += fmt.Sprintf("%d", id)
+				}
+			}
 		}
 		fields = []interface{}{imap.RawString(res)}
 
