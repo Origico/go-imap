@@ -47,7 +47,7 @@ func (r *Search) WriteTo(w *imap.Writer) (err error) {
 			// seq.AddNum(r.Ids...)
 			res += "ALL "
 			for gg, id := range r.Ids {
-				if gg < len(r.Ids) {
+				if gg < len(r.Ids)-1 {
 					res += fmt.Sprintf("%d,", id)
 				} else {
 					res += fmt.Sprintf("%d", id)
