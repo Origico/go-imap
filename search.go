@@ -80,6 +80,9 @@ type SearchCriteria struct {
 
 	Not []*SearchCriteria    // Each criteria doesn't match
 	Or  [][2]*SearchCriteria // Each criteria pair has at least one match of two
+
+	ReturnValue string // parameters of the return field of a request of the form: 11 UID SEARCH RETURN (COUNT) UID 1:* UNSEEN
+
 }
 
 // NewSearchCriteria creates a new search criteria.
@@ -249,6 +252,16 @@ func (c *SearchCriteria) parseField(fields []interface{}, charsetReader func(io.
 		} else {
 			c.WithoutFlags = append(c.WithoutFlags, CanonicalFlag(maybeString(f)))
 		}
+	case "RETURN":
+		if len(fields) > 0 {
+			if param, ok := fields[0].([]interface{}); ok {
+				if len(param) > 0 {
+					c.ReturnValue = param[0].(string)
+				}
+			}
+		}
+	case "COUNT":
+
 	default: // Try to parse a sequence set
 		if c.SeqNum, err = ParseSeqSet(key); err != nil {
 			return nil, err
