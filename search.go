@@ -268,6 +268,10 @@ func (c *SearchCriteria) parseField(fields []interface{}, charsetReader func(io.
 		}
 
 	default: // Try to parse a sequence set
+		// fix
+		if strings.ToUpper(c.Tag) == key {
+			return nil, nil
+		}
 		if c.SeqNum, err = ParseSeqSet(key); err != nil {
 			return nil, err
 		}
