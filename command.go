@@ -53,7 +53,9 @@ func (cmd *Command) Parse(fields []interface{}) error {
 	cmd.Name = strings.ToUpper(cmd.Name) // Command names are case-insensitive
 
 	cmd.Arguments = fields[2:]
-	if cmd.Name == "UID" {
+	param := fields[2].(string)
+
+	if cmd.Name == "UID" && param == "SEARCH" {
 		cmd.Arguments = append(cmd.Arguments, []interface{}{"TAG", cmd.Tag}...)
 	}
 
