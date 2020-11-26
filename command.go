@@ -51,13 +51,12 @@ func (cmd *Command) Parse(fields []interface{}) error {
 		return errors.New("imap: cannot parse command: invalid name")
 	}
 	cmd.Name = strings.ToUpper(cmd.Name) // Command names are case-insensitive
-
 	cmd.Arguments = fields[2:]
-	param := fields[2].(string)
-
-	if cmd.Name == "UID" && param == "SEARCH" {
-		cmd.Arguments = append(cmd.Arguments, []interface{}{"TAG", cmd.Tag}...)
+	if len(fields) > 2 {
+		param := fields[2].(string)
+		if cmd.Name == "UID" && param == "SEARCH" {
+			cmd.Arguments = append(cmd.Arguments, []interface{}{"TAG", cmd.Tag}...)
+		}
 	}
-
 	return nil
 }
