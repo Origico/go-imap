@@ -153,11 +153,11 @@ func (c *Client) fetch(uid bool, seqset *imap.SeqSet, items []imap.FetchItem, ch
 	}
 
 	res := &responses.Fetch{Messages: ch}
-
 	status, err := c.execute(cmd, res)
 	if err != nil {
 		return err
 	}
+
 	return status.Err()
 }
 

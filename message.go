@@ -263,7 +263,11 @@ func (m *Message) Parse(fields []interface{}) error {
 			case FetchUid:
 				m.Uid, _ = ParseNumber(f)
 			case FetchModSeq:
-				m.ModSeq, _ = ParseNumber(f)
+				modseq, ok := f.([]interface{})
+				if ok && len(modseq) > 0 {
+					data := modseq[0].(string)
+					m.ModSeq, _ = ParseNumber(data)
+				}
 			default:
 				// Likely to be a section of the body
 				// First check that the section name is correct

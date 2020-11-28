@@ -26,12 +26,15 @@ func (r *Fetch) Handle(resp imap.Resp) error {
 	}
 
 	msgFields, _ := fields[1].([]interface{})
+	// fmt.Println("fields[1]:", fields[1])
+
 	msg := &imap.Message{SeqNum: seqNum}
 	if err := msg.Parse(msgFields); err != nil {
 		return err
 	}
 
 	r.Messages <- msg
+
 	return nil
 }
 

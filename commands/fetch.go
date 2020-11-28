@@ -66,7 +66,7 @@ func (cmd *Fetch) Parse(fields []interface{}) error {
 		return errors.New("Items must be either a string or a list")
 	}
 
-	if len(fields) >= 2 {
+	if len(fields) > 2 {
 		switch items := fields[2].(type) {
 		case string:
 			cmd.getChangedSince(items)
