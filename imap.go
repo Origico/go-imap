@@ -12,11 +12,12 @@ import (
 type StatusItem string
 
 const (
-	StatusMessages    StatusItem = "MESSAGES"
-	StatusRecent      StatusItem = "RECENT"
-	StatusUidNext     StatusItem = "UIDNEXT"
-	StatusUidValidity StatusItem = "UIDVALIDITY"
-	StatusUnseen      StatusItem = "UNSEEN"
+	StatusMessages      StatusItem = "MESSAGES"
+	StatusRecent        StatusItem = "RECENT"
+	StatusUidNext       StatusItem = "UIDNEXT"
+	StatusUidValidity   StatusItem = "UIDVALIDITY"
+	StatusUnseen        StatusItem = "UNSEEN"
+	StatusHighestModseq StatusItem = "HIGHESTMODSEQ"
 )
 
 // A FetchItem is a message data item that can be fetched.
@@ -41,6 +42,7 @@ const (
 	FetchRFC822Text    FetchItem = "RFC822.TEXT"
 	FetchUid           FetchItem = "UID"
 	FetchModSeq        FetchItem = "MODSEQ"
+	FetchChangedSince  FetchItem = "CHANGEDSINCE"
 )
 
 // Expand expands the item if it's a macro.

@@ -46,6 +46,10 @@ func (r *Select) Handle(resp imap.Resp) error {
 		case "UIDVALIDITY":
 			mbox.UidValidity, _ = imap.ParseNumber(resp.Arguments[0])
 			item = imap.StatusUidValidity
+		case "HIGHESTMODSEQ":
+			mbox.HighestModSeq, _ = imap.ParseNumber(resp.Arguments[0])
+			item = imap.StatusHighestModseq
+
 		default:
 			return ErrUnhandled
 		}
@@ -131,6 +135,16 @@ func (r *Select) WriteTo(w *imap.Writer) error {
 				Code:      imap.CodeUidValidity,
 				Arguments: []interface{}{mbox.UidValidity},
 				Info:      "UIDs valid",
+			}
+			if err := statusRes.WriteTo(w); err != nil {
+				return err
+			}
+		case imap.StatusHighestModseq:
+			statusRes := &imap.StatusResp{
+				Type:      imap.StatusRespOk,
+				Code:      imap.CodeHighestModSeq,
+				Arguments: []interface{}{mbox.HighestModSeq},
+				Info:      "Highest",
 			}
 			if err := statusRes.WriteTo(w); err != nil {
 				return err

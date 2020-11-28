@@ -41,7 +41,7 @@ func (cmd *Select) Handle(conn Conn) error {
 
 	items := []imap.StatusItem{
 		imap.StatusMessages, imap.StatusRecent, imap.StatusUnseen,
-		imap.StatusUidNext, imap.StatusUidValidity,
+		imap.StatusUidNext, imap.StatusUidValidity, imap.StatusHighestModseq,
 	}
 
 	status, err := mbox.Status(items)
