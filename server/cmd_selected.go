@@ -169,7 +169,7 @@ func (cmd *Fetch) handle(uid bool, conn Conn) error {
 		}
 	})()
 
-	err := ctx.Mailbox.ListMessages(uid, cmd.SeqSet, cmd.Items, ch)
+	err := ctx.Mailbox.ListMessages(uid, cmd.SeqSet, cmd.Items, cmd.ChangedSince, ch)
 	if err != nil {
 		return err
 	}

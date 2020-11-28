@@ -175,6 +175,8 @@ type Message struct {
 	Size uint32
 	// The message unique identifier. It must be greater than or equal to 1.
 	Uid uint32
+	// ModSeq
+	ModSeq uint32
 	// The message body sections.
 	Body map[*BodySectionName]Literal
 
@@ -260,6 +262,8 @@ func (m *Message) Parse(fields []interface{}) error {
 				m.Size, _ = ParseNumber(f)
 			case FetchUid:
 				m.Uid, _ = ParseNumber(f)
+			case FetchModSeq:
+				m.ModSeq, _ = ParseNumber(f)
 			default:
 				// Likely to be a section of the body
 				// First check that the section name is correct
@@ -299,6 +303,8 @@ func (m *Message) formatItem(k FetchItem) []interface{} {
 		v = m.Size
 	case FetchUid:
 		v = m.Uid
+	case FetchModSeq:
+		v = []interface{}{m.ModSeq}
 	default:
 		for section, literal := range m.Body {
 			if section.value == k {

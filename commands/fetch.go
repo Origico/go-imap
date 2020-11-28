@@ -2,6 +2,7 @@ package commands
 
 import (
 	"errors"
+	"strconv"
 	"strings"
 
 	"github.com/emersion/go-imap"
@@ -9,8 +10,10 @@ import (
 
 // Fetch is a FETCH command, as defined in RFC 3501 section 6.4.5.
 type Fetch struct {
-	SeqSet *imap.SeqSet
-	Items  []imap.FetchItem
+	SeqSet       *imap.SeqSet     //
+	Items        []imap.FetchItem //
+	modSeqFlag   bool             // если данный флаг установлен в true надо анализировать ChangedSince
+	ChangedSince uint32           // число которое передается в ChangedSince
 }
 
 func (cmd *Fetch) Command() *imap.Command {
@@ -22,6 +25,18 @@ func (cmd *Fetch) Command() *imap.Command {
 	return &imap.Command{
 		Name:      "FETCH",
 		Arguments: []interface{}{cmd.SeqSet, items},
+	}
+}
+
+// getChangedSince разбираем параметры вида [CHANGEDSINCE 0]
+func (cmd *Fetch) getChangedSince(param string) {
+	if cmd.modSeqFlag {
+		changeSince, _ := strconv.ParseUint(param, 10, 32)
+		cmd.ChangedSince = uint32(changeSince)
+	} else {
+		if strings.ToUpper(param) == "CHANGEDSINCE" {
+			cmd.Items = append(cmd.Items, imap.FetchModSeq)
+		}
 	}
 }
 
@@ -51,5 +66,17 @@ func (cmd *Fetch) Parse(fields []interface{}) error {
 		return errors.New("Items must be either a string or a list")
 	}
 
+	if len(fields) >= 2 {
+		switch items := fields[2].(type) {
+		case string:
+			cmd.getChangedSince(items)
+		case []interface{}:
+			for _, i := range items {
+				cmd.getChangedSince(i.(string))
+			}
+		default:
+			return errors.New("Items must be either a string or a list")
+		}
+	}
 	return nil
 }
