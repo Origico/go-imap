@@ -31,18 +31,19 @@ const (
 	FetchFull FetchItem = "FULL"
 
 	// Items
-	FetchBody          FetchItem = "BODY"
-	FetchBodyStructure FetchItem = "BODYSTRUCTURE"
-	FetchEnvelope      FetchItem = "ENVELOPE"
-	FetchFlags         FetchItem = "FLAGS"
-	FetchInternalDate  FetchItem = "INTERNALDATE"
-	FetchRFC822        FetchItem = "RFC822"
-	FetchRFC822Header  FetchItem = "RFC822.HEADER"
-	FetchRFC822Size    FetchItem = "RFC822.SIZE"
-	FetchRFC822Text    FetchItem = "RFC822.TEXT"
-	FetchUid           FetchItem = "UID"
-	FetchModSeq        FetchItem = "MODSEQ"
-	FetchChangedSince  FetchItem = "CHANGEDSINCE"
+	FetchBody           FetchItem = "BODY"
+	FetchBodyStructure  FetchItem = "BODYSTRUCTURE"
+	FetchEnvelope       FetchItem = "ENVELOPE"
+	FetchFlags          FetchItem = "FLAGS"
+	FetchInternalDate   FetchItem = "INTERNALDATE"
+	FetchRFC822         FetchItem = "RFC822"
+	FetchRFC822Header   FetchItem = "RFC822.HEADER"
+	FetchRFC822Size     FetchItem = "RFC822.SIZE"
+	FetchRFC822Text     FetchItem = "RFC822.TEXT"
+	FetchUid            FetchItem = "UID"
+	FetchModSeq         FetchItem = "MODSEQ"
+	FetchChangedSince   FetchItem = "CHANGEDSINCE"
+	FetchUnchangedSince FetchItem = "UNCHANGEDSINCE"
 )
 
 // Expand expands the item if it's a macro.

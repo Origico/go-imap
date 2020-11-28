@@ -182,6 +182,8 @@ type Message struct {
 	// because some bad IMAP clients (looking at you, Outlook!) refuse responses
 	// containing items in a different order.
 	itemsOrder []FetchItem
+
+	ModSeq uint32
 }
 
 // Create a new empty message that will contain the specified items.
@@ -260,6 +262,8 @@ func (m *Message) Parse(fields []interface{}) error {
 				m.Size, _ = ParseNumber(f)
 			case FetchUid:
 				m.Uid, _ = ParseNumber(f)
+			case FetchModSeq:
+				m.ModSeq, _ = ParseNumber(f)
 			default:
 				// Likely to be a section of the body
 				// First check that the section name is correct
@@ -299,6 +303,8 @@ func (m *Message) formatItem(k FetchItem) []interface{} {
 		v = m.Size
 	case FetchUid:
 		v = m.Uid
+	case FetchModSeq:
+		v = m.ModSeq
 	default:
 		for section, literal := range m.Body {
 			if section.value == k {
